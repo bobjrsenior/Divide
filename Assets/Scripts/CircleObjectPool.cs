@@ -14,6 +14,14 @@ public class CircleObjectPool : MonoBehaviour
         freeCircleObjects.Clear();
     }
 
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
+
     public static ParticleBanding GetCircle()
     {
         if(freeCircleObjects.Count > 0){
